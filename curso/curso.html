@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Curso DogTrain para empezar a educar a tu perro paso a paso.">
+  <title>Curso DogTrain | Aprende paso a paso</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="course.css">
+</head>
+<body class="course-page">
+  <header class="site-header">
+    <a class="brand" href="../DogTrain.html" aria-label="DogTrain, inicio">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i><b></b></span>
+      <span>dog<span>train</span></span>
+    </a>
+    <a class="back-link" href="../DogTrain.html">â† Volver a DogTrain</a>
+  </header>
+
+  <main>
+    <section class="course-hero">
+      <div>
+        <p class="eyebrow"><span class="eyebrow-line"></span>Curso de iniciaciÃ³n Â· 4 pasos</p>
+        <h1>Tu camino para<br><em>entenderle mejor.</em></h1>
+        <p class="course-lead">Lecciones cortas y prÃ¡cticas para empezar a educar desde el vÃ­nculo. Avanza a tu ritmo y vuelve a cada paso cuando lo necesites.</p>
+      </div>
+      <div class="course-progress">
+        <div class="progress-top"><strong>Tu recorrido</strong><span>0% completado</span></div>
+        <div class="progress-track"><span></span></div>
+        <div class="progress-bottom"><p>4 lecciones Â· 35 min en total</p><button class="reset-button" id="reset-course" type="button">Reiniciar curso</button></div>
+      </div>
+    </section>
+
+    <section class="lesson-section">
+      <div class="lesson-heading"><span class="section-label">01 / Las lecciones</span><p>Empieza por el principio. Cada paso prepara el siguiente.</p></div>
+      <div class="lesson-list">
+        <article class="lesson-card lesson-card-featured">
+          <div class="lesson-number">01</div>
+          <div class="lesson-content"><p class="lesson-tag">La base</p><h2>Aprende a observar</h2><p>Descubre quÃ© te estÃ¡ diciendo tu perro antes de pedirle nada. Sus seÃ±ales son el comienzo de toda comunicaciÃ³n.</p><div class="lesson-meta"><span>8 min</span><span>Principiante</span></div></div>
+          <a class="video-button" data-step="1" href="https://www.youtube.com/results?search_query=lenguaje+canino+se%C3%B1ales+de+calma" target="_blank" rel="noopener noreferrer"><span class="play-icon">â–¶</span> Ver vÃ­deo en YouTube <span class="external-arrow">â†—</span></a>
+        </article>
+        <article class="lesson-card">
+          <div class="lesson-number">02</div>
+          <div class="lesson-content"><p class="lesson-tag">La conexiÃ³n</p><h2>Construye su atenciÃ³n</h2><p>Usa su nombre y tu presencia para crear una llamada positiva, clara y llena de confianza.</p><div class="lesson-meta"><span>9 min</span><span>PrÃ¡ctica guiada</span></div></div>
+          <a class="video-button" data-step="2" href="https://www.youtube.com/results?search_query=ense%C3%B1ar+el+nombre+al+perro+refuerzo+positivo" target="_blank" rel="noopener noreferrer"><span class="play-icon">â–¶</span> Ver vÃ­deo en YouTube <span class="external-arrow">â†—</span></a>
+        </article>
+        <article class="lesson-card">
+          <div class="lesson-number">03</div>
+          <div class="lesson-content"><p class="lesson-tag">La calma</p><h2>Refuerza lo que quieres ver</h2><p>Aprende a reconocer y premiar los momentos tranquilos que ya ocurren en vuestro dÃ­a.</p><div class="lesson-meta"><span>10 min</span><span>Rutina diaria</span></div></div>
+          <a class="video-button" data-step="3" href="https://www.youtube.com/results?search_query=refuerzo+positivo+perros+premiar+calma" target="_blank" rel="noopener noreferrer"><span class="play-icon">â–¶</span> Ver vÃ­deo en YouTube <span class="external-arrow">â†—</span></a>
+        </article>
+        <article class="lesson-card">
+          <div class="lesson-number">04</div>
+          <div class="lesson-content"><p class="lesson-tag">El paseo</p><h2>Salid a conversar</h2><p>Convierte el paseo en un espacio de cooperaciÃ³n: ritmo, atenciÃ³n y libertad con lÃ­mites amables.</p><div class="lesson-meta"><span>8 min</span><span>Para practicar fuera</span></div></div>
+          <a class="video-button" data-step="4" href="https://www.youtube.com/results?search_query=paseo+educativo+perros+correa+adiestramiento" target="_blank" rel="noopener noreferrer"><span class="play-icon">â–¶</span> Ver vÃ­deo en YouTube <span class="external-arrow">â†—</span></a>
+        </article>
+      </div>
+    </section>
+
+    <section class="course-note"><span class="note-symbol">âœ³</span><div><h2>Un recordatorio importante</h2><p>El progreso no siempre se ve como una orden perfecta. A veces es una mirada, una pausa o una vuelta voluntaria a tu lado.</p></div></section>
+  </main>
+  <footer class="footer"><a class="brand" href="../DogTrain.html"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i><b></b></span><span>dog<span>train</span></span></a><p>Entrenar para entender. Entender para convivir.</p><span class="footer-copy">Â© 2025 DogTrain</span></footer>
+  <script>
+    const progressKey = "dogtrain-course-progress";
+    const completedSteps = new Set(JSON.parse(localStorage.getItem(progressKey) || "[]"));
+    const progressBar = document.querySelector(".progress-track span");
+    const progressText = document.querySelector(".progress-top span");
+    const buttons = document.querySelectorAll(".video-button");
+    const resetButton = document.querySelector("#reset-course");
+
+    function refreshProgress() {
+      const percentage = Math.round((completedSteps.size / buttons.length) * 100);
+      progressBar.style.width = `${Math.max(percentage, 2)}%`;
+      progressText.textContent = `${percentage}% completado`;
+      buttons.forEach((button) => {
+        if (completedSteps.has(button.dataset.step)) {
+          button.classList.add("is-complete");
+          button.querySelector(".play-icon").textContent = "âœ“";
+          button.childNodes[1].textContent = " LecciÃ³n vista";
+        } else {
+          button.classList.remove("is-complete");
+          button.querySelector(".play-icon").textContent = "â–¶";
+          button.childNodes[1].textContent = " Ver vÃ­deo en YouTube";
+        }
+      });
+    }
+
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        completedSteps.add(button.dataset.step);
+        localStorage.setItem(progressKey, JSON.stringify([...completedSteps]));
+        refreshProgress();
+      });
+    });
+
+    resetButton.addEventListener("click", () => {
+      if (!completedSteps.size || !confirm("Â¿Quieres reiniciar tu progreso del curso?")) return;
+      completedSteps.clear();
+      localStorage.removeItem(progressKey);
+      refreshProgress();
+    });
+
+    refreshProgress();
+  </script>
+</body>
+</html>
+
