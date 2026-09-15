@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Accede a tu espacio DogTrain o crea una cuenta nueva.">
+  <title>Acceso | DogTrain</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="auth.css">
+</head>
+<body class="auth-page">
+  <header class="site-header">
+    <a class="brand" href="DogTrain.html" aria-label="DogTrain, inicio">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i><b></b></span>
+      <span>dog<span>train</span></span>
+    </a>
+    <a class="back-link" href="DogTrain.html">← Volver a DogTrain</a>
+  </header>
+
+  <main class="auth-main">
+    <section class="auth-intro">
+      <p class="eyebrow"><span class="eyebrow-line"></span>Tu espacio DogTrain</p>
+      <h1>Entrena a tu ritmo,<br><em>guarda tu progreso.</em></h1>
+      <p>Accede a tus lecciones y continúa construyendo una convivencia más sencilla, paso a paso.</p>
+      <span class="auth-doodle">✳</span>
+    </section>
+
+    <section class="auth-card" aria-label="Acceso a DogTrain">
+      <input class="auth-tab-input" type="radio" name="auth-tab" id="login-tab" checked>
+      <input class="auth-tab-input" type="radio" name="auth-tab" id="register-tab">
+      <div class="auth-tabs"><label for="login-tab">Iniciar sesión</label><label for="register-tab">Registrarse</label></div>
+
+      <form class="auth-form login-form" id="login-form">
+        <label for="login-email">Correo electrónico</label>
+        <input id="login-email" type="email" placeholder="tu@email.com" required>
+        <label for="login-password">Contraseña</label>
+        <input id="login-password" type="password" placeholder="Tu contraseña" required>
+        <a class="forgot-link" href="#registro">¿Has olvidado tu contraseña?</a>
+        <button class="button button-dark" type="submit">Entrar <span>→</span></button>
+      </form>
+
+      <form class="auth-form register-form" id="register-form">
+        <label for="register-name">Tu nombre</label>
+        <input id="register-name" type="text" placeholder="Cómo te llamamos" required>
+        <label for="register-email">Correo electrónico</label>
+        <input id="register-email" type="email" placeholder="tu@email.com" required>
+        <label for="register-password">Crea una contraseña</label>
+        <input id="register-password" type="password" placeholder="Mínimo 8 caracteres" minlength="8" required>
+        <button class="button button-dark" type="submit">Crear cuenta <span>→</span></button>
+      </form>
+      <p class="auth-legal">Al continuar aceptas los términos de uso de DogTrain.</p>
+    </section>
+  </main>
+
+  <footer class="footer"><a class="brand" href="DogTrain.html"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i><b></b></span><span>dog<span>train</span></span></a><p>Entrenar para entender. Entender para convivir.</p><span class="footer-copy">© 2025 DogTrain</span></footer>
+  <script>
+    const loginForm = document.querySelector("#login-form");
+    const registerForm = document.querySelector("#register-form");
+
+    loginForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const email = document.querySelector("#login-email").value.trim();
+      localStorage.setItem("dogtrain-user", JSON.stringify({ email }));
+      window.location.href = "DogTrain.html";
+    });
+
+    registerForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const name = document.querySelector("#register-name").value.trim();
+      const email = document.querySelector("#register-email").value.trim();
+      localStorage.setItem("dogtrain-user", JSON.stringify({ name, email }));
+      alert("¡Te has registrado correctamente en DogTrain!");
+      window.location.href = "DogTrain.html";
+    });
+  </script>
+</body>
+</html>
